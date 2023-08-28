@@ -21,8 +21,8 @@ def generate_random_high_repetitions_dataset(tests = 4, times = 100, dim = [10, 
         random_dataset.append(test)
     return random_dataset
 
-def generate_unbalanced_tree_dataset(terms = 100, dim = [10, 100, 1000, 10000]):
-    dataset = generate_random_high_repetitions_dataset()
+def generate_unbalanced_tree_dataset(tests = 4, terms = 100, dim = [10, 100, 1000, 10000]):
+    dataset = generate_random_high_repetitions_dataset(tests, terms, dim)
     for i in dataset:
         for j in i:
             j.sort()

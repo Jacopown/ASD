@@ -126,12 +126,12 @@ class Tree:
             raise ValueError('insertType deve essere "normal", "boolean", "list" o "random"')
 
     def search(self, x, k):
-            if x == None or k == x.key:
-                return x
+        while x != None and k != x.key:
             if k < x.key:
-                return self.search(x.left, k)
+                x = x.left
             else:
-                return self.search(x.right, k)
+                x = x.right
+        return x
 
     def _print_tree(self, node, level=0, prefix="Root: "):
         if node is not None:
