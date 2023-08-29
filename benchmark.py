@@ -4,20 +4,8 @@ import random
 
 def createTree(dataset, insertionType):
     tree = bst.Tree(dataset[0])
-    if insertionType == "normal":
-        for i in dataset[1:-1]:
-            tree.normalInsert(bst.Node(i))
-    elif insertionType == "boolean":
-        for i in dataset[1:-1]:
-            tree.booleanInsert(bst.Node(i))
-    elif insertionType == "list":
-        for i in dataset[1:-1]:
-            tree.listInsert(bst.Node(i))
-    elif insertionType == "random":
-        for i in dataset[1:-1]:
-            tree.randomInsert(bst.Node(i))
-    else:
-        raise ValueError('insertType deve essere "normal", "boolean", "list" o "random"')
+    for i in dataset[1:-1]:
+        tree.insert(i, insertionType)
     return tree
 
 def benchmark(dataset, insertionType):
@@ -37,7 +25,8 @@ def benchmark(dataset, insertionType):
             if insertionTime > maxInsertionTime: maxInsertionTime = insertionTime
             totalInsertionTime += insertionTime
             start = timer()
-            T.search(T.root, random.randint(0, 10*(10*i)))
+            x = random.choice(dataset[i][j])
+            T.search(x)
             end = timer()
             searchTime = end-start
             if searchTime > maxSearchTime: maxSearchTime = searchTime
