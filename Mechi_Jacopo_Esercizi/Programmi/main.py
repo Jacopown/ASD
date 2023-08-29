@@ -72,24 +72,3 @@ plt.xlabel('Number of nodes n')
 plt.ylabel('Time in ns')
 plt.legend(loc="upper left")
 plt.savefig('Chiavi duplicate in alberi binari di ricerca/Resources/ABR_Resources/WDsearch.png')
-# data = {'dataset dimension' : dim, 'random': randomNormalInsertionTimes, 'high repetitions': highRepetitionsNormalInsertionTimes, 'worst case': worstNormalInsertionTimes}
-# df = pd.DataFrame(data)  
-# print(df)  
-
-# print(randomNormalInsertionTimes)
-# print(randomBooleanInsertionTimes)
-# print(randomListInsertionTimes)
-# print(randomRandomInsertionTimes) 
-# print(highRepetitionsNormalInsertionTimes)
-# print(highRepetitionsBooleanInsertionTimes)
-# print(highRepetitionsListInsertionTimes)
-# print(highRepetitionsRandomInsertionTimes)
-# print(worstNormalInsertionTimes)
-# print(worstBooleanInsertionTimes)
-# print(worstListInsertionTimes)
-# print(worstRandomInsertionTimes)
-
-
-
-
-
